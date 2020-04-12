@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Caption This</string>
+    <string name="title">Caption\nThis</string>
+    <string name="intro">Caption This</string>
+    <string name="logo_content">Logo</string>
+    <string name="camera_button_description">camera button</string>
+    <string name="document_button_descriptio">document_button</string>
+    <string name="main_text_instruction">Choose a picture</string>
+    <string name="general">Default</string>
+    <string name="title_text_view">Caption\nThis</string>
+    <string name="picture_description">Nothing to describe</string>
+    <string name="image_description_dummy">Image description</string>
+</resources>
