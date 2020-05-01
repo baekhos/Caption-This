@@ -15,8 +15,8 @@ import com.karumi.dexter.MultiplePermissionsReport
 import com.karumi.dexter.PermissionToken
 import com.karumi.dexter.listener.PermissionRequest
 import com.karumi.dexter.listener.multi.MultiplePermissionsListener
-import kotlinx.android.synthetic.main.acivity_caption.*
 import kotlinx.android.synthetic.main.activity_photo.*
+
 
 class PhotoActivity : AppCompatActivity() {
 
@@ -107,13 +107,15 @@ class PhotoActivity : AppCompatActivity() {
         if (resultCode == Activity.RESULT_OK
             && requestCode == AppConstants.TAKE_PHOTO_REQUEST) {
             //photo from camera
-            //startActivity(intent)
+            intent.putExtra("imagePath",fileUri.toString())
+            startActivity(intent)
             //imageView.setImageURI(fileUri)
         }else if(resultCode == Activity.RESULT_OK
             && requestCode == AppConstants.PICK_PHOTO_REQUEST){
             //photo from gallery
             fileUri = data?.data
-            //startActivity(intent)
+            intent.putExtra("imagePath",fileUri.toString())
+            startActivity(intent)
             //imageView.setImageURI(fileUri)
         } else {
             super.onActivityResult(requestCode, resultCode, data)

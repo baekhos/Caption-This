@@ -19,21 +19,22 @@
             android:layout_height="189dp"
             android:layout_weight="1"
             android:drawableStart="@drawable/logo_no_text"
-            android:fontFamily="@font/merienda"
+            android:fontFamily="@font/bungee_shade"
             android:text="@string/title_text_view"
             android:textColor="#303F9F"
-            android:textSize="20sp"
+            android:textSize="30sp"
             android:gravity="center"
+            android:padding="10sp"
             android:textStyle="bold"
             tools:text="@string/title" />
 
         <ImageButton
             android:id="@+id/next_button"
-            android:layout_width="106dp"
-            android:layout_height="50dp"
+            android:layout_width="138dp"
+            android:layout_height="55dp"
             android:layout_gravity="end"
-            android:contentDescription="@string/general"
-            app:srcCompat="@drawable/next_button" />
+            android:background="@drawable/next_button"
+            android:contentDescription="@string/general" />
     </LinearLayout>
 
     <FrameLayout

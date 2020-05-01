@@ -10,4 +10,12 @@
     <string name="title_text_view">Caption\nThis</string>
     <string name="picture_description">Nothing to describe</string>
     <string name="image_description_dummy">Image description</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="new_to">New to Caption This? Register here</string>
+    <string name="register">Register</string>
+    <string name="name">Name</string>
+    <string name="already">Already a member? Login</string>
+    <string name="re_pwd">Re-enter Password</string>
 </resources>
