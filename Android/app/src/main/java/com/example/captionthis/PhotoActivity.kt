@@ -40,6 +40,10 @@ class PhotoActivity : AppCompatActivity() {
             if (user!=null){
                 try {
                     auth.signOut()
+                    Toast.makeText(
+                        baseContext, "Logout successful",
+                        Toast.LENGTH_LONG
+                    ).show()
                     startActivity(Intent(this, LoginActivity::class.java))
 
                 }catch (e:Exception){
