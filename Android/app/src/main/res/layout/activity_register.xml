@@ -22,7 +22,7 @@
         android:textStyle="bold"
         tools:text="@string/title" />
 
-    <TextView
+    <!--<TextView
         android:id="@+id/name_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -43,7 +43,7 @@
         android:hint="@string/name"
         android:importantForAutofill="no"
         android:inputType="textEmailAddress"
-        android:padding="10sp" />
+        android:padding="10sp" />-->
 
     <TextView
         android:id="@+id/email_text_view"
@@ -64,6 +64,8 @@
         android:layout_gravity="center"
         android:ems="10"
         android:hint="@string/email"
+        android:background="@color/common_google_signin_btn_text_dark_default"
+        android:alpha="0.6"
         android:importantForAutofill="no"
         android:inputType="textEmailAddress"
         android:padding="10sp" />
@@ -85,12 +87,14 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:ems="10"
+        android:background="@color/common_google_signin_btn_text_dark_default"
+        android:alpha="0.6"
         android:hint="@string/password"
         android:importantForAutofill="no"
         android:inputType="textPassword"
         android:padding="10sp" />
 
-    <TextView
+    <!--<TextView
         android:id="@+id/re_password_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -110,7 +114,7 @@
         android:hint="@string/re_pwd"
         android:importantForAutofill="no"
         android:inputType="textPassword"
-        android:padding="10sp" />
+        android:padding="10sp" />-->
 
     <ImageButton
         android:id="@+id/register_button"

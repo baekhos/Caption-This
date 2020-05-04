@@ -71,7 +71,7 @@
         <LinearLayout
             android:id="@+id/buttons_layout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:gravity="center|top"
             android:orientation="horizontal">
 
@@ -104,6 +104,18 @@
                 android:layout_height="42dp" />
 
         </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="29dp" />
+
+        <ImageButton
+            android:id="@+id/logout_button"
+            android:contentDescription="@string/general"
+            android:layout_width="140dp"
+            android:layout_height="64dp"
+            android:layout_gravity="center"
+            android:background="@drawable/logout_button" />
     </LinearLayout>
 
 </LinearLayout>

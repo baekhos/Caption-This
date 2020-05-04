@@ -16,20 +16,43 @@ import com.karumi.dexter.PermissionToken
 import com.karumi.dexter.listener.PermissionRequest
 import com.karumi.dexter.listener.multi.MultiplePermissionsListener
 import kotlinx.android.synthetic.main.activity_photo.*
-
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
+import java.lang.Exception
 
 class PhotoActivity : AppCompatActivity() {
 
     var fileUri: Uri? = null
+    private lateinit var auth: FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_photo)
+        auth=FirebaseAuth.getInstance()
         gallery_button.setOnClickListener {
             pickPhotoFromGallery()
         }
         camera_button.setOnClickListener{
             askCameraPermission()
         }
+        logout_button.setOnClickListener {
+            val user =auth.currentUser
+            if (user!=null){
+                try {
+                    auth.signOut()
+                    startActivity(Intent(this, LoginActivity::class.java))
+
+                }catch (e:Exception){
+                    // an error
+                    Toast.makeText(
+                        baseContext, "Logout failed due to: "+e.toString(),
+                        Toast.LENGTH_LONG
+                    ).show()
+                }
+
+            }
+        }
+
     }
     //pick a photo from gallery
     private fun pickPhotoFromGallery() {

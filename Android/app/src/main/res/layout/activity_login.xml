@@ -64,6 +64,8 @@
             android:layout_gravity="center"
             android:ems="10"
             android:hint="@string/email"
+            android:background="@color/common_google_signin_btn_text_dark_default"
+            android:alpha="0.6"
             android:importantForAutofill="no"
             android:inputType="textEmailAddress"
             android:padding="10sp" />
@@ -86,6 +88,8 @@
             android:layout_gravity="center"
             android:padding="10sp"
             android:hint="@string/password"
+            android:background="@color/common_google_signin_btn_text_dark_default"
+            android:alpha="0.6"
             android:inputType="textPassword"
             android:ems="10"
             android:importantForAutofill="no" />
@@ -108,6 +112,17 @@
             android:text="@string/new_to"
             android:textColor="#3F51B5"
             android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/forgot_link"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:text="@string/forgot"
+            android:textColor="#3F51B5"
+            android:textSize="20sp" />
+
     </LinearLayout>
 
 </LinearLayout>
