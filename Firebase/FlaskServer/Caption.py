@@ -66,7 +66,7 @@ class TokenizerWrap(Tokenizer):
 class Caption():
 
     def __init__(self,model_path):
-
+        print('='*10+' Initiating the caption model '+10*'=')
         self.img_size=(224, 224)
         num_words = 10000
         image_model = VGG16(include_top=True, weights='imagenet')
@@ -234,12 +234,12 @@ class Caption():
         return(output_text)
 
 #Test
-caption=Caption(model_path='finalModel')
-now=time.time()
-caption.generate_caption(image_path='test\\beach.jpg')
-then=time.time()
-print('Time lapsed: {}'.format(then-now))
-now=time.time()
-caption.generate_caption(image_path='test\\bear.jpg')
-then=time.time()
-print('Time lapsed: {}'.format(then-now))
+# caption=Caption(model_path='finalModel')
+# now=time.time()
+# caption.generate_caption(image_path='test\\beach.jpg')
+# then=time.time()
+# print('Time lapsed: {}'.format(then-now))
+# now=time.time()
+# caption.generate_caption(image_path='test\\bear.jpg')
+# then=time.time()
+# print('Time lapsed: {}'.format(then-now))
