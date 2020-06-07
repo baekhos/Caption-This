@@ -67,7 +67,8 @@
                     android:hint="@string/image_description_dummy"
                     android:importantForAutofill="no"
                     android:text="@string/picture_description"
-                    android:textColor="#110C0C" />
+                    android:textColor="#110C0C"
+                    android:textSize="25dp"/>
             </FrameLayout>
 
         </LinearLayout>

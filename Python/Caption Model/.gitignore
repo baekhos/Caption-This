@@ -1,0 +1,5 @@
+.ipynb_checkpoints
+_pycache_/
+captionThis_logs/
+data/
+models/
