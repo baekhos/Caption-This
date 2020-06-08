@@ -6,6 +6,7 @@ import glob
 import re
 import numpy as np
 
+import shutil
 
 import Caption as caption
 
@@ -52,12 +53,13 @@ def allowed_file(filename):
 
 @app.route('/predict', methods=['GET', 'POST'])
 def upload():
+    basepath = os.path.dirname(__file__)
     if request.method == 'POST':
         # Get the file from post request
         f = request.files['file']
 
         # Save the file to ./uploads
-        basepath = os.path.dirname(__file__)
+        
         file_path = os.path.join(
             basepath, app.config['UPLOAD_FOLDER'], secure_filename(f.filename))
         f.save(file_path)
@@ -71,6 +73,7 @@ def upload():
 
 @app.route('/api/predict', methods=['POST'])
 def upload_file():
+    basepath = os.path.dirname(__file__)
     # check if the post request has the file part
     if 'file' not in request.files:
         print([x for x in request.files.items()])
@@ -80,7 +83,6 @@ def upload_file():
     file = request.files['file']
     if file!=None and allowed_file(file.filename):
         filename = secure_filename(file.filename)
-        basepath = os.path.dirname(__file__)
         file_path = os.path.join(basepath, app.config['UPLOAD_FOLDER'], secure_filename(filename))
         file.save(file_path)
         # Make prediction

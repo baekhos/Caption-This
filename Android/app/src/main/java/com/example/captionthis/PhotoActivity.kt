@@ -136,14 +136,12 @@ class PhotoActivity : AppCompatActivity() {
             //photo from camera
             intent.putExtra("imagePath",fileUri.toString())
             startActivity(intent)
-            //imageView.setImageURI(fileUri)
         }else if(resultCode == Activity.RESULT_OK
             && requestCode == AppConstants.PICK_PHOTO_REQUEST){
             //photo from gallery
             fileUri = data?.data
             intent.putExtra("imagePath",fileUri.toString())
             startActivity(intent)
-            //imageView.setImageURI(fileUri)
         } else {
             super.onActivityResult(requestCode, resultCode, data)
         }

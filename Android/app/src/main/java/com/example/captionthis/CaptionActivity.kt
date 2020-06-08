@@ -4,8 +4,6 @@ package com.example.captionthis
 
 import android.app.ProgressDialog
 import android.content.Intent
-import android.graphics.Bitmap
-import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.provider.MediaStore
 import android.widget.Toast
@@ -15,7 +13,6 @@ import java.io.File
 import androidx.appcompat.app.AppCompatActivity
 import android.net.Uri
 import kotlinx.android.synthetic.main.acivity_caption.*
-import kotlinx.android.synthetic.main.activity_photo.*
 
 import com.example.captionthis.networking.ApiConfig
 import com.example.captionthis.networking.AppConfig
@@ -31,12 +28,10 @@ class CaptionActivity : AppCompatActivity() {
 
     private var postPath: String? = null
 
-    private var fileUri: Uri? = null
 
 
     private var contentDescription: String?= null
 
-    private lateinit var pDialog: ProgressDialog
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,7 +39,6 @@ class CaptionActivity : AppCompatActivity() {
 
         var image_path : String = intent.getStringExtra("imagePath");
         var fileUri = Uri.parse(image_path)
-        //picture_image_view.setImageURI(fileUri)
         var photo= MediaStore.Images.Media.getBitmap(this.getContentResolver(), fileUri);
         picture_image_view.setImageBitmap(photo)
         back_button.setOnClickListener {
@@ -68,23 +62,7 @@ class CaptionActivity : AppCompatActivity() {
     }
 
     fun get_description(){
-        // To be further implemented with firebase and image caption model
         uploadFile()
-//        Thread.sleep(500)
-//        var tries=0
-//        while (tries<5) {
-//            if (contentDescription != null) {
-//                description_text.text = contentDescription
-//                break;
-//            } else {
-//                tries = tries + 1
-//                uploadFile()
-//                Thread.sleep(400)
-//            }
-//        }
-//        if (tries==5){
-//            description_text.text = "Failed to get description"
-//        }
     }
 
     private fun uploadFile() {
