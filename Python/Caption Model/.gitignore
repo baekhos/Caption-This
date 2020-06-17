@@ -3,3 +3,5 @@ _pycache_/
 captionThis_logs/
 data/
 models/
+test/
+finalModel/
