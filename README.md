@@ -4,17 +4,17 @@
 
 Scopul proiectului
 
-Descrierea  con?inutului vizual de pe terminalele mobile cu ajutorul unui model de re?ea neuronala
+Descrierea  continutului vizual de pe terminalele mobile cu ajutorul unui model de retea neuronala
 
 <img src="img/readme3.png" width=201px />
 
 Obiectivele propuse
 
-Implementarea ?i antrenarea unei re?ele neuronale care va genera o descrierea textuala pe baza unei poze
+Implementarea si antrenarea unei retele neuronale care va genera o descrierea textuala pe baza unei poze
 
 Implementarea unui server care sa permita utilizarea modelului print REST API
 
-Dezvoltarea unei aplica?ii mobile care sa comunice cu serverul
+Dezvoltarea unei aplicatii mobile care sa comunice cu serverul
 
 
 
@@ -32,21 +32,21 @@ descrierii textuale
 
 
 
-Structura re?elei recurente
+Structura retelei recurente
 
 <img src="img/readme12.jpg" width=500px />
 
-Re?eaua de decodare este conectata la penultimul strat al VGG\-ului
+Reteaua de decodare este conectata la penultimul strat al VGG\-ului
 
 Primul strat reduce vectorul de intrare de la 4096 la 512\,egalcunumarul de stari interne ale straturilor GRU
 
-Ultimul strat va con?ine 10000 de elemente=dimensiunea vocabularului re?elei
+Ultimul strat va contine 10000 de elemente=dimensiunea vocabularului retelei
 
-Vectorul de ie?ire reprezinta o codare de tipone\-hot ?i\,folosind harta detokenizare\, determinamcuvântulpe baza indexului valorii maxime
+Vectorul de iesire reprezinta o codare de tipone\-hot si\,folosind harta detokenizare\, determinamcuvântulpe baza indexului valorii maxime
 
 
 
-Antrenarea re?elei
+Antrenarea retelei
 
 recurente
 
@@ -54,7 +54,7 @@ Pentru antrenarea modelului recurent s\-au utilizat:
 
 Imaginile sub forma codata de penultimul strat al VGG16 \(un vector 4096 valori\)
 
-OptimizatorRMSpropcu o rata de înva?are variabila
+OptimizatorRMSpropcu o rata de învatare variabila
 
 20 de epoci\, cu un o dimensiune a lotului de înva?are de 3000 de imagini\.
 
@@ -110,19 +110,19 @@ Dockerinstances
 
 Aplica?ia web software
 
-Serverul are ?i o aplica?ie web ce permite utilizatorului accesul la serviciul de generare a descrierilor\.
+Serverul are si o aplicatie web ce permite utilizatorului accesul la serviciul de generare a descrierilor\.
 
 <img src="img/readme28.png" width=500px />
 
 Serverul dispune si de un serviciu de REST API catre acest serviciu
 
-POSThttp://127\.0\.0\.1:5000/api/predict?i poza a carei descriere ne intereseaza
+POSThttp://127\.0\.0\.1:5000/api/predict si poza a carei descriere ne intereseaza
 
 
 
 Aplicatia Android
 
-Aplica?ia android are urmatoarea structura:
+Aplicatia android are urmatoarea structura:
 
 <img src="img/readme31.png" width=367px />
 
@@ -153,17 +153,17 @@ Generarea descrierii
 
 # Concluzii
 
-Proiectul de fa?a a reu?it sa atinga urmatoarele puncte:
+Proiectul de fata a reusit sa atinga urmatoarele puncte:
 
 Crearea unui model capabil sa genereze o descriere textuala pe baza unei imagini
 
-Antrenarea ?i testarea modelului de re?ea neuronala
+Antrenarea si testarea modelului de retea neuronala
 
-Implementarea modelului într\-un back\-endscalabil\,capabil sa faca fa?a cererii utilizatorilor
+Implementarea modelului într\-un back\-endscalabil\,capabil sa faca fata cererii utilizatorilor
 
-Crearea unei aplica?ii web care sa permita utilizarea aplica?iei prin intermediul unui browser web
+Crearea unei aplicatii web care sa permita utilizarea aplicatiei prin intermediul unui browser web
 
-Implementarea unei aplica?ii android cu un serviciu de autentificare ?i gestiune al utilizatorilor ce comunica cu serverul web pentru a genera descrierile imaginilor
+Implementarea unei aplicatii android cu un serviciu de autentificare si gestiune al utilizatorilor ce comunica cu serverul web pentru a genera descrierile imaginilor
 
-Testarea aplica?iei in diferite scenarii
+Testarea aplicatiei in diferite scenarii
 
