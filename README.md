@@ -46,9 +46,7 @@ Vectorul de iesire reprezinta o codare de tipone\-hot si\,folosind harta detoken
 
 
 
-Antrenarea retelei
-
-recurente
+Antrenarea retelei recurente
 
 Pentru antrenarea modelului recurent s\-au utilizat:
 
@@ -56,7 +54,7 @@ Imaginile sub forma codata de penultimul strat al VGG16 \(un vector 4096 valori\
 
 OptimizatorRMSpropcu o rata de învatare variabila
 
-20 de epoci\, cu un o dimensiune a lotului de înva?are de 3000 de imagini\.
+20 de epoci\, cu un o dimensiune a lotului de învatare de 3000 de imagini\.
 
 Oepocaadurataproximativ6 ore pe unprocesorgraficNvidiaGTX 1060
 
@@ -90,9 +88,7 @@ Pentru implementarea serverului ce ruleaza modelul de descriere aimagnilors\-au 
 
 Flask\(REST API\)
 
-HTML/CSS\(Interfa?a
-
-WEB\)
+HTML/CSS\(InterfataWEB\)
 
 Docker\(Scalabilitate\)
 
@@ -100,7 +96,7 @@ Firebase\(Autentificare\,Scalabilitate\)
 
 Google Cloud\(Hosting\)
 
-Scalabilitate?iloadbalancing
+Scalabilitate si loadbalancing
 
 <img src="img/readme25.jpg" width=500px />
 
@@ -108,7 +104,7 @@ Dockerinstances
 
 
 
-Aplica?ia web software
+Aplicatia web software
 
 Serverul are si o aplicatie web ce permite utilizatorului accesul la serviciul de generare a descrierilor\.
 
