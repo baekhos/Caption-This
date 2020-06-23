@@ -1,6 +1,4 @@
-<img src="img/readme0.gif" width=385px />
-
-<img src="img/readme1.jpg" width=500px />
+# Caption this
 
 <img src="img/readme2.png" width=366px />
 
@@ -18,17 +16,13 @@ Implementarea unui server care sa permita utilizarea modelului print REST API
 
 Dezvoltarea unei aplica?ii mobile care sa comunice cu serverul
 
-<img src="img/readme4.gif" width=385px />
 
-<img src="img/readme5.jpg" width=500px />
 
 __Diagrama bloc a__  __aplicatiei__
 
 <img src="img/readme6.jpg" width=500px />
 
-<img src="img/readme7.gif" width=385px />
 
-<img src="img/readme8.jpg" width=500px />
 
 Modelul de generare a
 
@@ -36,9 +30,7 @@ descrierii textuale
 
 <img src="img/readme9.png" width=500px />
 
-<img src="img/readme10.gif" width=385px />
 
-<img src="img/readme11.jpg" width=500px />
 
 Structura re?elei recurente
 
@@ -50,11 +42,9 @@ Primul strat reduce vectorul de intrare de la 4096 la 512\,egalcunumarul de star
 
 Ultimul strat va con?ine 10000 de elemente=dimensiunea vocabularului re?elei
 
-Vectorul de ie?ire reprezinta o codare de tipone\-hot ?i\,folosind harta detokenizare\, determinamcuv‚ntulpe baza indexului valorii maxime
+Vectorul de ie?ire reprezinta o codare de tipone\-hot ?i\,folosind harta detokenizare\, determinamcuv√¢ntulpe baza indexului valorii maxime
 
-<img src="img/readme13.gif" width=385px />
 
-<img src="img/readme14.jpg" width=500px />
 
 Antrenarea re?elei
 
@@ -64,9 +54,9 @@ Pentru antrenarea modelului recurent s\-au utilizat:
 
 Imaginile sub forma codata de penultimul strat al VGG16 \(un vector 4096 valori\)
 
-OptimizatorRMSpropcu o rata de Ónva?are variabila
+OptimizatorRMSpropcu o rata de √Ænva?are variabila
 
-20 de epoci\, cu un o dimensiune a lotului de Ónva?are de 3000 de imagini\.
+20 de epoci\, cu un o dimensiune a lotului de √Ænva?are de 3000 de imagini\.
 
 Oepocaadurataproximativ6 ore pe unprocesorgraficNvidiaGTX 1060
 
@@ -74,9 +64,7 @@ __Evolu?ia func?iei cost__  __pe__  __setul__  __de__  __validare__
 
 <img src="img/readme15.png" width=500px />
 
-<img src="img/readme16.gif" width=385px />
 
-<img src="img/readme17.jpg" width=500px />
 
 Rezultatele modelului
 
@@ -90,9 +78,7 @@ Rezultatele modelului
 
 Setulde validare
 
-<img src="img/readme22.gif" width=385px />
 
-<img src="img/readme23.jpg" width=500px />
 
 Implementare serverului
 
@@ -120,9 +106,7 @@ Scalabilitate?iloadbalancing
 
 Dockerinstances
 
-<img src="img/readme26.gif" width=385px />
 
-<img src="img/readme27.jpg" width=500px />
 
 Aplica?ia web software
 
@@ -134,37 +118,40 @@ Serverul dispune si de un serviciu de REST API catre acest serviciu
 
 POSThttp://127\.0\.0\.1:5000/api/predict?i poza a carei descriere ne intereseaza
 
-<img src="img/readme29.gif" width=385px />
 
-<img src="img/readme30.jpg" width=500px />
 
-Aplica?ia Android
+Aplicatia Android
+
+Aplica?ia android are urmatoarea structura:
 
 <img src="img/readme31.png" width=367px />
 
+Pagina de introducere
+
 <img src="img/readme32.png" width=366px />
 
-Aplica?ia android are urmatoarea structura:
+Paginile de autentificare/√Ænregistrare
+
 
 <img src="img/readme33.png" width=372px />
 
 <img src="img/readme34.png" width=365px />
 
+Pagina de selectare a pozei
+
 <img src="img/readme35.png" width=363px />
+
+Generarea descrierii
 
 <img src="img/readme36.png" width=361px />
 
-Pagina de introducere
 
-2\.  Paginile de autentificare/Ónregistrare
 
-3\.  Pagina de selectare a pozei
 
-4\.  Generarea descrierii
 
-<img src="img/readme37.gif" width=385px />
 
-<img src="img/readme38.jpg" width=500px />
+
+# Concluzii
 
 Proiectul de fa?a a reu?it sa atinga urmatoarele puncte:
 
@@ -172,7 +159,7 @@ Crearea unui model capabil sa genereze o descriere textuala pe baza unei imagini
 
 Antrenarea ?i testarea modelului de re?ea neuronala
 
-Implementarea modelului Óntr\-un back\-endscalabil\,capabil sa faca fa?a cererii utilizatorilor
+Implementarea modelului √Æntr\-un back\-endscalabil\,capabil sa faca fa?a cererii utilizatorilor
 
 Crearea unei aplica?ii web care sa permita utilizarea aplica?iei prin intermediul unui browser web
 
