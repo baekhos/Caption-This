@@ -52,6 +52,7 @@ One epoch took 5 hours on a nvidiaGTX 1060.
 Acurracy
 
 BLEU(2002)= 34.08%
+
 Meteor(2005)= 34.08%
 
 
