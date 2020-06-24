@@ -37,7 +37,7 @@ __Diagrama bloc a__  __aplicatiei__
 The decoder is connected to the penultimate layer of the VGG16 with a layer that reduces the size from 4096 to 512. 512 is also the number of internal states of our GRU architecture. The last layer will contain a layer of 10000 elements which is also the dimension of our vocabulary.
 
 
-## Antrenarea retelei recurente
+## Training process
 
 The recurent model was trained with the following hyperparameters
 
@@ -110,6 +110,7 @@ POST http://127\.0\.0\.1:5000/api/predict and the image as payload
 # Android Aplication
 
 Structure
+<img src="img/readme36.png" width=361px />
 
 <img src="img/readme31.png" width=367px />
 
@@ -130,7 +131,7 @@ Image selection page
 
 Description generator
 
-<img src="img/readme36.png" width=361px />
+
 
 
 
