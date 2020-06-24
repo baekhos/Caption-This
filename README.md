@@ -49,6 +49,12 @@ The recurent model was trained with the following hyperparameters
 
 One epoch took 5 hours on a nvidiaGTX 1060.
 
+Acurracy
+
+BLEU(2002)= 34.08%
+Meteor(2005)= 34.08%
+
+
 __Evolu?ia func?iei cost__  __pe__  __setul__  __de__  __validare__
 
 <img src="img/readme15.png" width=500px />
@@ -134,6 +140,7 @@ Image selection page
 
 
 Description generator
+
 <img src="img/readme31.png" width=367px />
 
 
