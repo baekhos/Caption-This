@@ -2,19 +2,19 @@
 
 <img src="img/readme2.png" width=366px />
 
-Scopul proiectului
+## Motivation
 
-Descrierea  continutului vizual de pe terminalele mobile cu ajutorul unui model de retea neuronala
+Image captioning on a mobile terminal using a machine learning model
+
 
 <img src="img/readme3.png" width=201px />
 
-Obiectivele propuse
+## Objectives
 
-Implementarea si antrenarea unei retele neuronale care va genera o descrierea textuala pe baza unei poze
+-Development and implementation of a neuronal network that will take an image as input and will generate a sentence that summarise the contents of the image.
+-Have a web server that runs the previous mentioned model
+-An android application that will act as a client to our server
 
-Implementarea unui server care sa permita utilizarea modelului print REST API
-
-Dezvoltarea unei aplicatii mobile care sa comunice cu serverul
 
 
 
@@ -24,39 +24,30 @@ __Diagrama bloc a__  __aplicatiei__
 
 
 
-Modelul de generare a
-
-descrierii textuale
+## Neural network architecture
 
 <img src="img/readme9.png" width=500px />
 
 
 
-Structura retelei recurente
+## The recurrent network(Decoder)
 
 <img src="img/readme12.jpg" width=500px />
 
-Reteaua de decodare este conectata la penultimul strat al VGG\-ului
-
-Primul strat reduce vectorul de intrare de la 4096 la 512\,egalcunumarul de stari interne ale straturilor GRU
-
-Ultimul strat va contine 10000 de elemente=dimensiunea vocabularului retelei
-
-Vectorul de iesire reprezinta o codare de tipone\-hot si\,folosind harta detokenizare\, determinamcuvântulpe baza indexului valorii maxime
+The decoder is connected to the penultimate layer of the VGG16 with a layer that reduces the size from 4096 to 512. 512 is also the number of internal states of our GRU architecture. The last layer will contain a layer of 10000 elements which is also the dimension of our vocabulary.
 
 
+## Antrenarea retelei recurente
 
-Antrenarea retelei recurente
+The recurent model was trained with the following hyperparameters
 
-Pentru antrenarea modelului recurent s\-au utilizat:
+-Images were given under the format of the penultimate layer of vgg16.
 
-Imaginile sub forma codata de penultimul strat al VGG16 \(un vector 4096 valori\)
+-Optimizer: RMSprop 
 
-OptimizatorRMSpropcu o rata de învatare variabila
+20 epochs\,batch size 3000 images\.
 
-20 de epoci\, cu un o dimensiune a lotului de învatare de 3000 de imagini\.
-
-Oepocaadurataproximativ6 ore pe unprocesorgraficNvidiaGTX 1060
+One epoch took 5 hours on a nvidiaGTX 1060.
 
 __Evolu?ia func?iei cost__  __pe__  __setul__  __de__  __validare__
 
@@ -64,7 +55,7 @@ __Evolu?ia func?iei cost__  __pe__  __setul__  __de__  __validare__
 
 
 
-Rezultatele modelului
+Results
 
 <img src="img/readme18.jpg" width=500px />
 
@@ -72,72 +63,72 @@ Rezultatele modelului
 
 <img src="img/readme20.jpg" width=500px />
 
+On the validation set
+
+
 <img src="img/readme21.jpg" width=500px />
 
-Setulde validare
 
 
+# Server implementation
 
-Implementare serverului
-
-Autentificarefirebase
+Firebase authentification
 
 <img src="img/readme24.png" width=500px />
 
-Pentru implementarea serverului ce ruleaza modelul de descriere aimagnilors\-au utilizat urmatoarele tehnologii:
+Technologies used in server implementaion
 
 Flask\(REST API\)
 
-HTML/CSS\(InterfataWEB\)
+HTML/CSS\(UI\)
 
-Docker\(Scalabilitate\)
+Docker\(Scalability\)
 
-Firebase\(Autentificare\,Scalabilitate\)
+Firebase\(Authentification\,Scalability\)
 
 Google Cloud\(Hosting\)
 
-Scalabilitate si loadbalancing
+Scalability and loadbalancing
 
 <img src="img/readme25.jpg" width=500px />
 
-Dockerinstances
+Docker instances
 
 
+# Web application
 
-Aplicatia web software
 
-Serverul are si o aplicatie web ce permite utilizatorului accesul la serviciul de generare a descrierilor\.
 
 <img src="img/readme28.png" width=500px />
 
-Serverul dispune si de un serviciu de REST API catre acest serviciu
+Path to REST API for image description generation
 
-POSThttp://127\.0\.0\.1:5000/api/predict si poza a carei descriere ne intereseaza
+POST http://127\.0\.0\.1:5000/api/predict and the image as payload
 
 
 
-Aplicatia Android
+# Android Aplication
 
-Aplicatia android are urmatoarea structura:
+Structure
 
 <img src="img/readme31.png" width=367px />
 
-Pagina de introducere
+Introduction page
 
 <img src="img/readme32.png" width=366px />
 
-Paginile de autentificare/înregistrare
+Login/Register Pages
 
 
 <img src="img/readme33.png" width=372px />
 
 <img src="img/readme34.png" width=365px />
 
-Pagina de selectare a pozei
+Image selection page
 
 <img src="img/readme35.png" width=363px />
 
-Generarea descrierii
+Description generator
 
 <img src="img/readme36.png" width=361px />
 
@@ -147,19 +138,4 @@ Generarea descrierii
 
 
 
-# Concluzii
-
-Proiectul de fata a reusit sa atinga urmatoarele puncte:
-
-Crearea unui model capabil sa genereze o descriere textuala pe baza unei imagini
-
-Antrenarea si testarea modelului de retea neuronala
-
-Implementarea modelului într\-un back\-endscalabil\,capabil sa faca fata cererii utilizatorilor
-
-Crearea unei aplicatii web care sa permita utilizarea aplicatiei prin intermediul unui browser web
-
-Implementarea unei aplicatii android cu un serviciu de autentificare si gestiune al utilizatorilor ce comunica cu serverul web pentru a genera descrierile imaginilor
-
-Testarea aplicatiei in diferite scenarii
 
