@@ -112,24 +112,27 @@ POST http://127\.0\.0\.1:5000/api/predict and the image as payload
 Structure
 <img src="img/readme36.png" width=361px />
 
-<img src="img/readme31.png" width=367px />
 
 Introduction page
+<img src="img/readme31.png" width=367px />
 
-<img src="img/readme32.png" width=366px />
+
+
+
 
 Login/Register Pages
 
-
+<img src="img/readme32.png" width=366px />
 <img src="img/readme33.png" width=372px />
 
+Image selection page
 <img src="img/readme34.png" width=365px />
 
-Image selection page
-
-<img src="img/readme35.png" width=363px />
 
 Description generator
+<img src="img/readme35.png" width=363px />
+
+
 
 
 
