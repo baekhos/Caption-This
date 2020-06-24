@@ -18,7 +18,7 @@ Image captioning on a mobile terminal using a machine learning model
 
 
 
-__Diagrama bloc a__  __aplicatiei__
+__Block diagram__
 
 <img src="img/readme6.jpg" width=500px />
 
@@ -56,7 +56,7 @@ BLEU(2002)= 34.08%
 Meteor(2005)= 34.08%
 
 
-__Evolu?ia func?iei cost__  __pe__  __setul__  __de__  __validare__
+__Cost function evolution on validation set__
 
 <img src="img/readme15.png" width=500px />
 
