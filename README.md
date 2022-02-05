@@ -11,8 +11,8 @@ Image captioning on a mobile terminal using a machine learning model
 
 ## Objectives
 
--Development and implementation of a neuronal network that will take an image as input and will generate a sentence that summarise the contents of the image.
--Have a web server that runs the previous mentioned model
+-Development and implementation of a neuronal network that will take an image as input and will generate a sentence that summarises the contents of the image.
+-Have a web server that runs the previously mentioned model
 -An android application that will act as a client to our server
 
 
